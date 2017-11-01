@@ -9,14 +9,14 @@ import {
   BASENAME,
 } from '../../constants';
 
-import './App.css';
+import styles from './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Start a app</h1>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <h1 className={styles.title}>Start a app</h1>
         </header>
       </div>
     );

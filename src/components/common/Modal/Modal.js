@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './EmptyModal.m.css';
+import styles from './Modal.m.css';
 
-class EmptyModal extends React.Component {
+class Modal extends React.Component {
   render() {
     const {
       isShow,
@@ -32,15 +32,15 @@ class EmptyModal extends React.Component {
   }
 }
 
-EmptyModal.propTypes = {
+Modal.propTypes = {
   keepShowWhenBackground: PropTypes.bool,
   isShow: PropTypes.bool,
   handleIsShow: PropTypes.func,
   children: PropTypes.node,
 };
 
-EmptyModal.defaultProps = {
+Modal.defaultProps = {
   keepShowWhenBackground: false,
 };
 
-export default EmptyModal;
+export default Modal;
