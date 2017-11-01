@@ -1,3 +1,18 @@
 {
-  "extends": "react-app"
+  "extends": [
+    "eslint:recommended",
+    "react-app",
+    "idiomatic"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "space-in-parens": off,
+    "one-var": off,
+    "computed-property-spacing": off,
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true } ],
+  },
 }

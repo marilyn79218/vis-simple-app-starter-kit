@@ -15,7 +15,7 @@ class Modal extends React.Component {
       <div
         className={isShow ? styles.baseShow : styles.base}
         onClick={(e) => {
-          if (this.props.keepShowWhenBackground) return;
+          if (this.props.keepShowWhenBackground) { return }
           if (e.target === this.base) {
             handleIsShow(false);
           }
