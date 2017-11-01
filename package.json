@@ -101,6 +101,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-config-idiomatic": "^4.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
     "postcss-color-function": "^4.0.0",

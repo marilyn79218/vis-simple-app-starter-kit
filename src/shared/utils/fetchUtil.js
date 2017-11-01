@@ -62,7 +62,7 @@ const allowedMethod = [
 const fetchUtil = endpoint => allowedMethod.reduce(
   (pV, cV) => ({
     ...pV,
-    [cV]: ({body, headers} = {}) => wrappedFetch(endpoint)(cV, body, headers)
+    [cV]: ({ body, headers } = {}) => wrappedFetch(endpoint)(cV, body, headers)
   })
   , {}
 )
