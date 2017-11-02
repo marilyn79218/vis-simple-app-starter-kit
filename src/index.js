@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import 'react-dual-listbox/lib/react-dual-listbox.css';
 import './index.css';
 import App from './components/app/App';
 import registerServiceWorker from './registerServiceWorker';
