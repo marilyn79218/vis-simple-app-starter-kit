@@ -43,7 +43,18 @@ const checkStatus = handle401 => response => {
     return handle401();
   }
 
-  return response.json();
+  if (response.status === 204) {
+    return {};
+  }
+
+  return response.json()
+    .then(json => {
+      if (json.response_code === 1 || response.status === 200) {
+        return Promise.resolve(json);
+      } else {
+        return Promise.reject(json);
+      }
+    });
 };
 
 const wrappedFetch = endpoint => (method, body, header) =>
