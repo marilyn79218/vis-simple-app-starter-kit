@@ -49,7 +49,8 @@ const checkStatus = handle401 => response => {
 
   return response.json()
     .then(json => {
-      if (json.response_code === 1 || response.status === 200) {
+      if (json.response_code === 1
+          || (json.response_code === undefined && response.status === 200)) {
         return Promise.resolve(json);
       } else {
         return Promise.reject(json);
