@@ -26,7 +26,7 @@ this project use `whatwg-fetch` as fetch polyfill
 import fetchUtil from 'shared/utils/fetchUtil';
 
 const endpoint = '/books';
-const fetchBooks = fetchUtil(books);
+const fetchBooks = fetchUtil(endpoint);
 
 fetchBooks.get()
   .then(console.log); // GET /books response
