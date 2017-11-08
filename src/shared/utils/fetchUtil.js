@@ -1,3 +1,5 @@
+import qs from 'qs';
+
 const API_HOST = process.env.VIS_API_HOST;
 
 const genTokenHeader = token => (
@@ -71,12 +73,16 @@ const allowedMethod = [
   'patch',
 ];
 
+const bindQuery = (endpoint, query) =>
+  (query ? `${endpoint}?${qs.stringify(query)}` : endpoint);
+
 const fetchUtil = endpoint => allowedMethod.reduce(
   (pV, cV) => ({
     ...pV,
-    [cV]: ({ body, headers } = {}) => wrappedFetch(endpoint)(cV, body, headers)
+    [cV]: ({ body, headers, query } = {}) =>
+      wrappedFetch(bindQuery(endpoint, query))(cV, body, headers),
   })
   , {}
-)
+);
 
 export default fetchUtil;
