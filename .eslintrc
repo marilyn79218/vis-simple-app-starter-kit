@@ -14,5 +14,6 @@
     "one-var": off,
     "computed-property-spacing": off,
     "brace-style": ["error", "1tbs", { "allowSingleLine": true } ],
+    "no-console": 1
   },
 }
