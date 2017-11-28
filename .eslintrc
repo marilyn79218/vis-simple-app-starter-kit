@@ -6,14 +6,14 @@
   ],
   "env": {
     "browser": true,
-    "node": true,
+    "node": true
   },
   "parser": "babel-eslint",
   "rules": {
-    "space-in-parens": off,
-    "one-var": off,
-    "computed-property-spacing": off,
+    "space-in-parens": "off",
+    "one-var": "off",
+    "computed-property-spacing": "off",
     "brace-style": ["error", "1tbs", { "allowSingleLine": true } ],
     "no-console": 1
-  },
+  }
 }
